@@ -17,6 +17,8 @@ from sklearn.neighbors import NearestNeighbors
 from sklearn.utils import column_or_1d
 from sklearn.utils.multiclass import type_of_target
 
+from rdkit import DataStructs
+
 from ..exceptions import raise_isinstance_error
 
 SAMPLING_KIND = (
