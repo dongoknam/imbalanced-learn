@@ -92,7 +92,7 @@ def check_neighbors_object(nn_name, nn_object, additional_neighbor=0):
         The k-NN object.
     """
     if isinstance(nn_object, Integral):
-        return NearestNeighbors(n_neighbors=nn_object + additional_neighbor)
+        return NearestNeighbors(n_neighbors=nn_object + additional_neighbor, metric = DataStructs.TanimotoSimilarity)
     elif isinstance(nn_object, KNeighborsMixin):
         return clone(nn_object)
     else:
